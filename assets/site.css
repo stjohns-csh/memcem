@@ -1,0 +1,201 @@
+/* Memorial Cemetery of St. John's Church — shares its palette and type with stjcsh.org */
+:root{--blue:#004687;--blue-dark:#003463;--teal:#8CA9C6;--ink:#2C3539;--soft:#5a6570;--rule:#dfe4ea;--warm:#FAF7EF;
+--display:"Cormorant Garamond",Georgia,"Times New Roman",serif;--body:"PT Sans","Segoe UI",Helvetica,Arial,sans-serif}
+html{-webkit-text-size-adjust:100%}
+*{box-sizing:border-box}
+body{margin:0;font-family:var(--body);font-size:18px;line-height:1.65;color:var(--ink);background:#fff}
+img{max-width:100%;display:block}
+a{color:var(--blue)}
+a:focus-visible,.button:focus-visible,button:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.skip{position:absolute;left:-999px;top:0;background:#fff;padding:10px 16px;z-index:20}
+.skip:focus{left:8px;top:8px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+
+/* header */
+.siteheader{background:#fff;border-bottom:3px solid var(--teal);position:relative;z-index:10}
+.masthead .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 24px;padding-top:12px;padding-bottom:12px}
+.brand{display:block;line-height:0;text-decoration:none}
+.brand img{height:92px;width:auto;max-width:min(78vw,420px);object-fit:contain}
+.menu-toggle{display:none;font:700 .8rem var(--body);letter-spacing:.1em;text-transform:uppercase;background:none;border:1px solid var(--blue);color:var(--blue);padding:9px 14px;cursor:pointer}
+nav ul{list-style:none;display:flex;flex-wrap:wrap;gap:6px 22px;margin:0;padding:0}
+nav li{position:relative}
+nav a{font-family:var(--body);font-weight:700;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:var(--blue);padding:6px 0;display:inline-block;border-bottom:2px solid transparent}
+nav a:hover,nav a[aria-current=page]{border-bottom-color:var(--teal)}
+.has-dropdown>a{margin-right:2px}
+.dropdown-toggle{background:none;border:0;color:var(--blue);cursor:pointer;font-size:.8rem;padding:4px 4px}
+.dropdown{display:none;position:absolute;left:-14px;top:100%;background:#fff;border:1px solid var(--rule);border-top:3px solid var(--teal);padding:8px 18px;min-width:230px;box-shadow:0 8px 24px rgba(0,30,60,.12);flex-direction:column;gap:2px}
+.dropdown li a{padding:8px 0;white-space:nowrap}
+.has-dropdown:hover>.dropdown,.has-dropdown.open>.dropdown{display:flex}
+
+/* hero */
+.hero{position:relative;min-height:clamp(420px,66svh,720px);display:flex;align-items:flex-end;background-color:var(--blue);background-size:cover;background-position:center 45%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,32,62,.78) 0%,rgba(0,32,62,.38) 38%,rgba(0,32,62,.04) 72%)}
+.hero .wrap{position:relative;z-index:1;width:100%;padding-bottom:clamp(30px,6vh,64px)}
+.hero h1{font-family:var(--display);font-weight:600;font-size:clamp(2.5rem,6.2vw,4.3rem);line-height:1.04;color:#fff;margin:0 0 .25em;max-width:18ch;text-shadow:0 2px 18px rgba(0,0,0,.4)}
+.hero .motto{font-family:var(--display);font-style:italic;color:#eef3f8;font-size:clamp(1.3rem,2.8vw,1.75rem);margin:0 0 1.3em;text-shadow:0 1px 12px rgba(0,0,0,.45)}
+/* home hero: text on the right, like stjcsh.org */
+.hero:not(.subhero)::after{background:linear-gradient(260deg,rgba(0,32,62,.66),rgba(0,32,62,.34) 52%,rgba(0,32,62,.05)),linear-gradient(to top,rgba(0,32,62,.5) 0%,rgba(0,32,62,0) 45%)}
+.hero:not(.subhero) .wrap{max-width:none;margin:0;padding-left:clamp(28px,6vw,110px);padding-right:clamp(28px,6vw,110px);text-align:right}
+.hero:not(.subhero) h1{margin-left:auto;max-width:15ch}
+.hero:not(.subhero) .motto{margin-left:auto}
+.subhero{min-height:clamp(260px,38vh,400px)}
+.subhero h1{font-size:clamp(2.1rem,4.8vw,3.2rem);margin:0}
+.button{display:inline-block;background:var(--blue);color:#fff;font-family:var(--body);font-weight:700;font-size:.82rem;letter-spacing:.09em;text-transform:uppercase;text-decoration:none;padding:15px 30px;transition:background-color .18s}
+.button:hover{background:var(--blue-dark)}
+.button.light{background:#fff;color:var(--blue)}
+.button.light:hover{background:var(--warm)}
+
+/* content */
+section{padding:44px 0}
+section+section{border-top:1px solid var(--rule)}
+h2{font-family:var(--body);font-weight:700;font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);margin:0 0 1.5em;padding-bottom:.7em;border-bottom:2px solid var(--teal);display:inline-block}
+h3{font-family:var(--display);font-weight:600;font-size:1.65rem;line-height:1.2;margin:1.6em 0 .35em;color:var(--blue)}
+h3:first-child{margin-top:0}
+.prose{max-width:64ch}
+.prose p{margin:0 0 1.1em}
+.lede{font-family:var(--display);font-size:clamp(1.5rem,3vw,2.05rem);line-height:1.35;color:var(--blue);max-width:34ch;margin:0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:32px}
+.card a.card-link{text-decoration:none;color:inherit;display:block}
+.card img{aspect-ratio:3/2;object-fit:cover;width:100%;margin-bottom:14px}
+.card .k{font-family:var(--display);font-weight:600;font-size:1.7rem;line-height:1.12;color:var(--blue);margin:0 0 .15em}
+.card p{margin:0;color:var(--soft)}
+.card a.card-link:hover .k{text-decoration:underline}
+.warm{background:var(--warm)}
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:start}
+.split img{width:100%;height:auto}
+figure{margin:0}
+figcaption{font-size:.9rem;color:var(--soft);margin-top:8px;line-height:1.45}
+.facts{display:grid;grid-template-columns:auto 1fr;gap:6px 22px;max-width:60ch;margin:0}
+.facts dt{font-weight:700;color:var(--blue)}
+.facts dd{margin:0}
+.timeline{list-style:none;margin:0;padding:0;max-width:64ch}
+.timeline li{display:grid;grid-template-columns:5.2rem 1fr;gap:4px 18px;padding:14px 0;border-top:1px solid var(--rule)}
+.timeline li:first-child{border-top:0}
+.timeline .yr{font-family:var(--display);font-weight:600;font-size:1.5rem;color:var(--blue);line-height:1.2}
+.rooms{columns:2 260px;column-gap:40px;max-width:70ch;padding-left:1.1em;margin:0}
+.rooms li{margin-bottom:.35em;break-inside:avoid}
+.areas{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:26px}
+.area{border-left:8px solid var(--teal);padding-left:18px}
+.area.a1{border-color:#6aa65a}.area.a2{border-color:#f2b84b}.area.a3{border-color:#b9d36a}.area.a4{border-color:#c9a8e8}
+.area h3{margin-top:0}
+.area p{margin:.2em 0 0}
+.mapgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:34px}
+.mapgrid img{width:100%;height:auto;border:1px solid var(--rule);background:#fff}
+.mapgrid a{display:block}
+.note{background:var(--warm);border-left:4px solid var(--teal);padding:16px 20px;max-width:64ch;margin:0 0 1.4em}
+.note p{margin:0}
+.people{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:26px;margin:0;padding:0;list-style:none}
+.people .nm{font-family:var(--display);font-weight:600;font-size:1.5rem;color:var(--blue);line-height:1.15}
+.people .rl{color:var(--soft)}
+.confirm{background:#fff3b0;padding:0 .25em;border-radius:2px}
+.draftbanner{background:#fff3b0;border:1px solid #e3cf5e;padding:14px 18px;max-width:64ch;margin:0 0 1.6em}
+
+/* footer */
+footer{background:var(--blue);color:#eaf1f8;padding:40px 0 30px;font-size:.95rem;margin-top:0}
+footer a{color:#fff}
+footer .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:28px}
+footer h4{font-family:var(--body);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;margin:0 0 .7em;color:var(--teal)}
+footer p,footer ul{margin:0}
+footer ul{list-style:none;padding:0}
+footer li{margin:.25em 0}
+
+
+@media (max-width:860px){
+ .menu-toggle{display:inline-block}
+ nav{width:100%}
+ nav ul{display:none;flex-direction:column;gap:0;padding:6px 0 10px}
+ nav.open ul{display:flex}
+ nav li{border-top:1px solid var(--rule)}
+ nav a{padding:12px 0;font-size:.82rem}
+ .dropdown{position:static;border:0;box-shadow:none;padding:0 0 6px 16px;min-width:0}
+ .has-dropdown:hover>.dropdown{display:none}
+ .has-dropdown.open>.dropdown{display:flex}
+ .split{grid-template-columns:1fr}
+ .timeline li{grid-template-columns:1fr}
+}
+@media print{.siteheader nav,.menu-toggle,.hero::after{display:none}.hero{min-height:0}}
+
+/* header floats over the hero photo, like stjcsh.org */
+.siteheader{position:absolute;top:0;left:0;right:0;background:transparent;border-bottom:0}
+.siteheader.solid{position:relative;background:var(--blue)}
+.siteheader::before{content:"";position:absolute;inset:0 0 -40px 0;background:linear-gradient(to bottom,rgba(0,24,48,.62) 0%,rgba(0,24,48,.34) 55%,rgba(0,24,48,0) 100%);pointer-events:none;z-index:-1}
+.siteheader.solid::before{display:none}
+.brand{filter:drop-shadow(0 2px 10px rgba(0,20,40,.6))}
+.brand img{height:84px}
+nav>ul>li>a{color:#fff;text-shadow:0 1px 8px rgba(0,20,40,.65)}
+nav>ul>li>a:hover,nav>ul>li>a[aria-current=page]{border-bottom-color:var(--teal)}
+.dropdown-toggle{color:#fff;text-shadow:0 1px 8px rgba(0,20,40,.65)}
+.dropdown li a{color:var(--blue);text-shadow:none}
+.hero{min-height:clamp(560px,88svh,980px);padding-top:130px}
+.subhero{min-height:clamp(400px,54vh,600px)}
+.hero::after{background:linear-gradient(to top,rgba(0,32,62,.72) 0%,rgba(0,32,62,.3) 36%,rgba(0,32,62,0) 66%)}
+.hero:not(.subhero)::after{background:linear-gradient(260deg,rgba(0,32,62,.62),rgba(0,32,62,.3) 52%,rgba(0,32,62,.03)),linear-gradient(to top,rgba(0,32,62,.45) 0%,rgba(0,32,62,0) 45%)}
+@media (max-width:860px){
+ .brand img{height:68px}
+ nav ul{background:rgba(0,36,72,.96);padding:4px 16px 10px;margin-top:6px}
+ nav li{border-top:1px solid rgba(255,255,255,.2)}
+ nav>ul>li>a{display:block}
+ .dropdown{background:transparent}
+ .dropdown li a{color:#fff}
+ .has-dropdown{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between}
+ .has-dropdown .dropdown{flex-basis:100%}
+ .menu-toggle{color:#fff;border-color:#fff;background:rgba(0,24,48,.35)}
+ .dropdown-toggle{display:none}
+ .hero{min-height:clamp(520px,80svh,760px)}
+ .subhero{min-height:clamp(380px,52vh,520px)}
+}
+
+/* home hero in the style of the Pond Alliance site: eyebrow, italic accent, pill buttons */
+.hero:not(.subhero)::after{background:linear-gradient(90deg,rgba(0,74,140,.30) 0%,rgba(0,40,84,.50) 52%,rgba(0,30,60,.66) 100%),linear-gradient(to top,rgba(0,30,60,.5) 0%,rgba(0,30,60,0) 46%)}
+.hero:not(.subhero) .wrap{display:flex;justify-content:flex-end;text-align:left;padding-bottom:clamp(40px,8vh,90px)}
+.hero-block{width:min(560px,46vw);min-width:300px}
+.eyebrow{font:700 .74rem var(--body);letter-spacing:.22em;text-transform:uppercase;color:#eaf1f8;margin:0 0 1.1em;text-shadow:0 1px 10px rgba(0,20,40,.6)}
+.hero:not(.subhero) h1{margin:0 0 .12em;max-width:none;font-size:clamp(2.4rem,5vw,3.9rem);line-height:1.04}
+.hero h1 em{display:block;font-style:italic;font-weight:400;color:var(--teal)}
+.hero:not(.subhero) .motto{margin:.1em 0 1em;font-size:clamp(1.15rem,2.2vw,1.45rem)}
+.hero-lede{font-size:1.02rem;line-height:1.6;color:#f2f6fa;max-width:46ch;margin:0 0 1.6em;text-shadow:0 1px 10px rgba(0,20,40,.55)}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+.pill{display:inline-block;border-radius:999px;font:700 .86rem var(--body);letter-spacing:.03em;text-decoration:none;padding:14px 28px;transition:background-color .18s,color .18s}
+.pill.solid{background:#fff;color:var(--blue)}
+.pill.solid:hover{background:var(--warm)}
+.pill.ghost{border:1px solid rgba(255,255,255,.75);color:#fff}
+.pill.ghost:hover{background:rgba(255,255,255,.14)}
+@media (max-width:860px){.hero-block{width:100%;min-width:0}.hero:not(.subhero) .wrap{justify-content:flex-start}}
+
+/* footer: logo column, and the family-of-websites bar */
+footer{padding:44px 0 36px}
+footer .cols{grid-template-columns:1.3fr 1fr 1fr}
+.fbrand img{width:112px;height:auto;margin-bottom:14px;opacity:.95}
+.fbrand p{max-width:34ch;color:#cfdcea}
+@media (max-width:760px){footer .cols{grid-template-columns:1fr}}
+.family{background:#1b2d40;color:#8d9fb2;padding:22px 0 18px;font-size:.92rem}
+.family .row{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px 28px}
+.family .lbl{font:700 .72rem var(--body);letter-spacing:.16em;text-transform:uppercase;color:#8d9fb2}
+.family a{color:#eaf1f8;text-decoration:none}
+.family a:hover{text-decoration:underline}
+.family .fine{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px 24px;margin-top:20px;padding-top:16px;border-top:1px solid rgba(255,255,255,.12);font-size:.78rem;letter-spacing:.05em;color:#8d9fb2}
+
+/* spacing fixes */
+.masthead .wrap{padding-top:22px;padding-bottom:14px}
+footer{padding:44px 0 0}
+footer>.wrap{padding-bottom:40px}
+@media (max-width:860px){.masthead .wrap{padding-top:16px}}
+
+/* header spans full width so the logo sits at the left edge, matching the hero's side margins */
+.masthead .wrap{max-width:none;padding-left:clamp(28px,6vw,110px);padding-right:clamp(28px,6vw,110px)}
+@media (max-width:860px){.masthead .wrap{padding-left:20px;padding-right:20px}}
+
+/* interior pages: lighter, more targeted shading so the photographs show.
+   A soft band behind the logo and menu, and a small pool of shade behind the page title. */
+.siteheader:has(+ .subhero)::before{inset:0 0 -10px 0;background:linear-gradient(to bottom,rgba(0,24,48,.5) 0%,rgba(0,24,48,.26) 60%,rgba(0,24,48,0) 100%)}
+.subhero::after{background:radial-gradient(ellipse 70% 90% at 0% 100%,rgba(0,32,62,.6) 0%,rgba(0,32,62,.3) 45%,rgba(0,32,62,0) 75%)}
+.subhero h1{text-shadow:0 2px 14px rgba(0,16,34,.65)}
+
+/* home hero: lighter shading, text aligned to the right edge */
+.hero:not(.subhero)::after{background:linear-gradient(90deg,rgba(0,30,60,0) 0%,rgba(0,30,60,.16) 50%,rgba(0,30,60,.42) 100%),linear-gradient(to top,rgba(0,30,60,.3) 0%,rgba(0,30,60,0) 40%)}
+.hero:not(.subhero) .wrap{text-align:right}
+.hero-block{margin-left:auto}
+.hero-lede{margin-left:auto}
+.hero-actions{justify-content:flex-end}
+.hero:not(.subhero) h1,.hero-lede,.eyebrow,.hero:not(.subhero) .motto{text-shadow:0 2px 16px rgba(0,16,34,.7),0 0 3px rgba(0,16,34,.35)}
+.hero:not(.subhero) .motto{margin-left:auto}
